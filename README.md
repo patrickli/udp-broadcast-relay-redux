@@ -38,7 +38,7 @@ USAGE
   `--multicast <group address>`.
 - The source address for all packets can be modified with `-s <ip>`. This
   is unusual.
-- A special source ip of `-s 1.1.1.1` can be used to set the source ip
+- A special source ip of `-s 0.0.0.1` can be used to set the source ip
   to the address of the outgoing interface.
 - `-f` will fork the application to the background.
 
@@ -46,7 +46,7 @@ EXAMPLE
 -------
 
 #### mDNS / Multicast DNS (Chromecast Discovery + Bonjour + More)
-`./udp-broadcast-relay-redux --id 1 --port 5353 --dev eth0 --dev eth1 --multicast 224.0.0.251 -s 1.1.1.1`
+`./udp-broadcast-relay-redux --id 1 --port 5353 --dev eth0 --dev eth1 --multicast 224.0.0.251 -s 0.0.0.1`
 
 (Chromecast requires broadcasts to originate from an address on its subnet)
 
